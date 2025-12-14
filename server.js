@@ -9,7 +9,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI,
+mongoose.connect(
+  "mongodb+srv://sunilreddy903212_db_user:GbxDdcs@cluster0.wnmketn.mongodb.net/?appName=Cluster0",
  
 )
 .then(() => console.log("MongoDB Connected"))
