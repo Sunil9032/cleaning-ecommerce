@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cleaning Products Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🧼 Cleaning Products Store</h1>
+
+<div class="products">
+
+  <div class="product">
+    <img src="images/floor-cleaner.jpg" alt="Floor Cleaner">
+    <h2>Floor Cleaner</h2>
+    <p class="price">₹299</p>
+    <button onclick="addToCart('Floor Cleaner', 299)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="images/toilet-cleaner.jpg" alt="Toilet Cleaner">
+    <h2>Toilet Cleaner</h2>
+    <p class="price">₹199</p>
+    <button onclick="addToCart('Toilet Cleaner', 199)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="images/dishwash.jpg" alt="Dish Wash">
+    <h2>Dish Wash Liquid</h2>
+    <p class="price">₹149</p>
+    <button onclick="addToCart('Dish Wash Liquid', 149)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="images/glass-cleaner.jpg" alt="Glass Cleaner">
+    <h2>Glass Cleaner</h2>
+    <p class="price">₹179</p>
+    <button onclick="addToCart('Glass Cleaner', 179)">Add to Cart</button>
+  </div>
+
+</div>
+
+<hr>
+
+<h2>🛒 Cart</h2>
+<div id="cart"></div>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<button onclick="checkout()" class="checkout-btn">Checkout</button>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

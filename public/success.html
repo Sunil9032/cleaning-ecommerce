@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      width: 350px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>✅ Payment Successful</h1>
+    <p><strong>Payment ID:</strong></p>
+    <p id="paymentId"></p>
+
+    <p><strong>Total Paid:</strong> ₹<span id="amount"></span></p>
+
+    <br>
+    <a href="/">⬅ Back to Store</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("paymentId").innerText =
+      params.get("payment_id");
+
+    document.getElementById("amount").innerText =
+      params.get("amount");
+  </script>
+
+</body>
+</html>
